@@ -1,0 +1,80 @@
+- 👋 Hi, I’m @nishiieee
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+
+<!---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future You Game</title>
+    <style>
+        .purple {
+            color: purple;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Future You Game!</h1>
+
+    <!-- Initial interaction -->
+    <div id="intro">
+        <p>Hi! What's your name?</p>
+        <input type="text" id="userName" placeholder="Enter your name" />
+        <button onclick="startGame()">Submit</button>
+    </div>
+
+    <!-- Game questions and responses -->
+    <div id="gameContent" class="hidden">
+        <p id="gameMessage"></p>
+        <input type="text" id="userInput" placeholder="Type your answer here" />
+        <button onclick="processResponse()">Submit</button>
+    </div>
+
+    <script>
+        // Step 1: Start the game by asking for the user's name
+        let userName = '';
+        let gameStarted = false;
+        let userInput = '';
+        
+        function startGame() {
+            userName = document.getElementById('userName').value;
+            document.getElementById('intro').classList.add('hidden');
+            document.getElementById('gameContent').classList.remove('hidden');
+            document.getElementById('gameMessage').innerHTML = `Wow! That's a beautiful name, ${userName}! You must be wondering who I am!<br><br>I'm future you! That's right! I'm you. I'm here to help you understand how successful you are in the future!<br><br>You are very successful, but I need your help! I'm forgetting everything I learned as a student!<br><br>Could you reteach the material to me? Please (that one emoji). Just try not to input any numbers, only words!<br><br>If you'll teach me, say "yes", and if you won't (sad), type "no"`;
+        }
+
+        // Step 2: Process user response (yes or no)
+        function processResponse() {
+            userInput = document.getElementById('userInput').value.toLowerCase();
+            
+            if (userInput === 'yes') {
+                document.getElementById('gameMessage').innerHTML = `<span class="purple">YAYYYYYY!!!!</span> Let's start! Write down anything and everything you know about the topic!`;
+                document.getElementById('userInput').value = '';
+                document.getElementById('gameContent').innerHTML += `
+                    <br><br>WOW! That's so much info! You know so much, and you're so smart! I can't believe we're the same person! That's all for today, I guess.<br><br>
+                    You can always come back to teach me! I'll be here whenever you need me.<br><br>
+                    Remember. You are great. You are successful and you CAN succeed. You are perfect, no matter what happens and no matter what grades you get. I believe in you!<br><br>
+                    Enjoy your break! Bye bye for now!
+                `;
+            } else if (userInput === 'no') {
+                document.getElementById('gameMessage').innerHTML = `Awwwwww, it's sad you don't want to teach me, but I guess I'll respect your choice. Bye bye.`;
+            } else {
+                document.getElementById('gameMessage').innerHTML = 'Please type "yes" or "no" to continue.';
+            }
+
+            document.getElementById('userInput').value = '';  // Clear the input field
+        }
+    </script>
+</body>
+</html>
+
+--->
